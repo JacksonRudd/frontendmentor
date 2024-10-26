@@ -1,0 +1,82 @@
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Figtree";
+}
+
+.topic-tag {
+  background: var(--yellow);
+  font-weight: 800;
+  border-radius: 5px;
+  padding: 4px 12px;
+  display: inline-block; /* Ensures the element only takes up as much space as its content */
+  width: auto; /* Ensures it doesn't expand to fill the parent */
+}
+
+.title {
+  font-weight: 900;
+}
+
+/* on hover we want to turn the title yellow and add a clicker */
+.title:hover {
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+.words {
+  padding-right: 40px;
+}
+
+.shell {
+  max-width: 400px;
+  min-width: 310px;
+  width: 30%;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 10px 10px 0 0 var(--gray-950);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid var(--gray-500);
+  line-height: 1.5;
+}
+img {
+  border-radius: 5%;
+  width: 100%;
+}
+
+.description {
+  color: var(--gray-500);
+}
+
+.signature {
+  height: 40px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.signature p {
+  margin-left: 10px;
+  font-weight: 800;
+}
+
+.signature img {
+  border-radius: 50%;
+  height: 100%;
+  width: auto;
+}
