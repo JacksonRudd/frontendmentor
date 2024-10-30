@@ -1,0 +1,165 @@
+:root {
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --font-size: 13px;
+  --font-family: "Manrope";
+  --weight-500: 500;
+  --weight-700: 700;
+}
+
+body {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  background: var(--light-grayish-blue);
+  color: var(--desaturated-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  line-height: 1.5;
+  caret-color: transparent;
+}
+
+h2 {
+  font-weight: var(--weight-700);
+  color: var(--very-dark-grayish-blue);
+  font-size: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  background: white;
+  border-radius: 10px;
+  font-weight: var(--weight-500);
+  padding: 0px;
+}
+
+.left {
+  background-image: url("./images/drawers.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  width: 100%;
+  flex: 3;
+  /* don't let this bleed off the parent */
+  border-radius: 10px 0px 0px 10px;
+}
+.content {
+  padding: 2rem;
+  flex: 4;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.signature {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.sign b {
+  margin-bottom: 0px;
+}
+
+.signature p {
+  color: var(--grayish-blue);
+  font-weight: var(--weight-700);
+  margin-top: 5px;
+}
+
+.signature img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.all-share {
+  position: relative;
+}
+
+.share {
+  background-color: var(--light-grayish-blue);
+  padding: 10px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0px;
+  cursor: pointer;
+  position: relative;
+}
+
+.share:hover {
+  background: var(--grayish-blue);
+}
+
+.share img {
+  width: 20px;
+  height: 20px;
+}
+
+.share-to-socials {
+  display: none;
+  gap: 1rem;
+  background: var(--very-dark-grayish-blue);
+  padding: 5px;
+  border-radius: 10px;
+  height: 30px;
+  width: 248px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  top: -60px;
+  left: -110px;
+}
+
+.social {
+  background-color: var(--very-dark-grayish-blue);
+  border: 0px;
+}
+
+.show {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  body {
+    height: 5000px;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    /* start items at the top */
+    justify-content: flex-start;
+  }
+
+  .card {
+    flex-direction: column;
+    width: 100%;
+    height: 700px;
+    border-radius: 10px;
+    margin: 10px;
+  }
+  .content {
+    flex: 1;
+  }
+
+  .left {
+    background-position: center;
+    background-size: cover;
+    flex: 1;
+    border-radius: 10px 10px 0px 0px;
+  }
+}
